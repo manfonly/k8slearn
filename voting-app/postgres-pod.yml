@@ -8,6 +8,9 @@ metadata:
 spec:
     containers:
         - name: postgres
-          image: postgres
+          image: postgres:9.4
+          env:
+            - name: POSTGRES_PASSWORD
+              value: pgsql@123
           ports:
           - containerPort: 5432
